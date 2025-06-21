@@ -1,0 +1,31 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NAFDAC SmartBot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Toggle Button -->
+    <div id="chat-toggle" onclick="toggleChat()">💬</div>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget" id="chat-widget">
+        <div class="chat-header">
+            <img src="{{ url_for('static', filename='image/NAFDAC_logo.png') }}" alt="Logo">
+            <div class="chat-title">I'm NAFDAC SmartBot!</div>
+            <button class="close-btn" onclick="toggleChat()">×</button>
+        </div>
+
+        <div class="chat-box" id="chat-box"></div>
+
+        <div class="chat-input">
+            <textarea id="user-input" placeholder="Ask a NAFDAC-related question..."></textarea>
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

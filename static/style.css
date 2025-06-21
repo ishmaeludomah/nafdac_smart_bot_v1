@@ -1,0 +1,135 @@
+/* Chat Toggle Button */
+#chat-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #00723f;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+}
+
+/* Chat Widget */
+.chat-widget {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 320px;
+    height: 400px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    overflow: hidden;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Header */
+.chat-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+    padding: 8px 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.chat-header img {
+    width: 40px;
+    height: 40px;
+}
+
+.chat-title {
+    font-weight: bold;
+    font-size: 14px;
+    color: #00723f;
+    margin-left: 8px;
+    flex: 1;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #666;
+    cursor: pointer;
+}
+
+/* Chat Box */
+.chat-box {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    background-color: #fff;
+}
+
+.user-message {
+    background-color: #f5f5d3;
+    padding: 8px 12px;
+    margin: 8px 0;
+    border-radius: 10px;
+    text-align: right;
+    font-size: 14px;
+}
+
+.bot-message {
+    background-color: #e7f2ff;
+    padding: 8px 12px;
+    margin: 8px 0;
+    border-radius: 10px;
+    text-align: left;
+    font-size: 14px;
+}
+
+/* Input Area */
+.chat-input {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    background-color: #fafafa;
+}
+
+.chat-input textarea {
+    resize: none;
+    height: 50px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+    margin-bottom: 8px;
+}
+
+.chat-input button {
+    align-self: flex-end;
+    padding: 8px 12px;
+    background-color: #00723f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.chat-input button:hover {
+    background-color: #005a32;
+}
+
+/* Scrollbar */
+.chat-box::-webkit-scrollbar {
+    width: 5px;
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+}
