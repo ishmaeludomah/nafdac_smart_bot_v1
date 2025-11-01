@@ -78,15 +78,46 @@
     text-align: right;
     font-size: 14px;
 }
+.bot-message strong {
+    font-weight: 700;
+    color: #000;
+}
 
 .bot-message {
     background-color: #e7f2ff;
-    padding: 8px 12px;
-    margin: 8px 0;
+    padding: 10px 14px;
+    margin: 10px 0;
     border-radius: 10px;
     text-align: left;
     font-size: 14px;
+    line-height: 1.6;
+    white-space: pre-wrap; /* preserves line breaks */
+    color: #222;
 }
+
+/* Make bold text stand out */
+.bot-message strong {
+    font-weight: 600;
+    color: #000;
+}
+
+/* Proper formatting for numbered and bulleted lists */
+.bot-message ul,
+.bot-message ol {
+    margin: 8px 0 8px 20px;  /* indentation for lists */
+    padding-left: 10px;
+}
+
+/* Each bullet or number gets spacing */
+.bot-message li {
+    margin-bottom: 6px;
+}
+
+/* Space between paragraphs */
+.bot-message p {
+    margin: 6px 0;
+}
+
 
 /* Input Area */
 .chat-input {

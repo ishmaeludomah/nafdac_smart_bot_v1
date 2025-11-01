@@ -50,7 +50,8 @@ function appendMessage(sender, message, className) {
     const chatBox = document.getElementById("chat-box");
     const messageDiv = document.createElement("div");
     messageDiv.className = className;
-    messageDiv.innerHTML = `<strong>${sender}:</strong><br>${message}`;
     chatBox.appendChild(messageDiv);
     chatBox.scrollTop = chatBox.scrollHeight;
+    messageDiv.innerHTML = `<p><strong>${sender}:</strong></p>${message}`;
+
 }
