@@ -27,7 +27,7 @@ function sendMessage() {
     const userMessage = inputField.value.trim();
     if (!userMessage) return;
 
-    appendMessage("You", userMessage, "user-message");
+    appendMessage("", userMessage, "user-message");
     inputField.value = "";
 
     fetch("/chat", {
@@ -38,7 +38,7 @@ function sendMessage() {
     .then(response => response.json())
     .then(data => {
         const botReply = data.reply;
-        appendMessage("NAFDAC SmartBot", botReply, "bot-message");
+        appendMessage("", botReply, "bot-message");
     })
     .catch(err => {
         appendMessage("Error", "Sorry, something went wrong.", "bot-message");
@@ -52,6 +52,6 @@ function appendMessage(sender, message, className) {
     messageDiv.className = className;
     chatBox.appendChild(messageDiv);
     chatBox.scrollTop = chatBox.scrollHeight;
-    messageDiv.innerHTML = `<p><strong>${sender}:</strong></p>${message}`;
+    messageDiv.innerHTML = `${message}`;
 
 }
